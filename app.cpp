@@ -127,8 +127,7 @@ int main(int argc, char *argv[]) {
     std::cout << "Running display capture" << std::endl;
     createframegrabber();
 
-    //
-    std::this_thread::sleep_for(std::chrono::seconds(60));
+    std::this_thread::sleep_until(std::chrono::system_clock::now() + std::chrono::hours(std::numeric_limits<int>::max()));
 
     return 0;
 }
