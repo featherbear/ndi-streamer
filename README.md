@@ -19,6 +19,18 @@ Compared to the entire OBS+NDI stack (300 MB RAM), NDI Streamer only uses 30 MB 
 
 ---
 
+## Building
+
+> Linux users: You may need to install some development dependencies.  
+`$> apt install libxtst-dev libxinerama-dev libx11-dev libxfixes-dev`
+
+```bash
+cmake . # Generate makefiles
+make    # Build the program at build/ndi-streamer
+```
+
+---
+
 ## License
 
 This software is licensed under the MIT license, as can be viewed [here](LICENSE.md).  
