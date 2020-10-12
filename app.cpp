@@ -76,7 +76,8 @@ void createframegrabber() {
 
                 ExtractAndConvertToRGBA(img, (unsigned char *)frame_buffers[monitor.Id], monitor.Width * monitor.Height * 4);
                 frames[monitor.Id].p_data = (uint8_t *)frame_buffers[monitor.Id];
-                NDIlib_send_send_video_async_v2(senders[monitor.Id], &frames[monitor.Id]);
+                NDIlib_send_send_video_v2(senders[monitor.Id], &frames[monitor.Id]);
+                // NDIlib_send_send_video_async_v2(senders[monitor.Id], &frames[monitor.Id]);
 
                 if (std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::high_resolution_clock::now() - onNewFramestart).count() >=
                     1000) {
