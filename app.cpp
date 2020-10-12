@@ -72,8 +72,6 @@ void createframegrabber() {
             return mons;
         })
             ->onNewFrame([&](const SL::Screen_Capture::Image &img, const SL::Screen_Capture::Monitor &monitor) {
-                if (monitor.Id != 0) return;
-
                 ExtractAndConvertToRGBA(img, (unsigned char *)frame_buffers[monitor.Id], monitor.Width * monitor.Height * 4);
                 frames[monitor.Id].p_data = (uint8_t *)frame_buffers[monitor.Id];
                 NDIlib_send_send_video_v2(senders[monitor.Id], &frames[monitor.Id]);
