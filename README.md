@@ -25,6 +25,7 @@ Compared to the entire OBS+NDI stack (300 MB RAM), NDI Streamer only uses 30 MB 
 `$> apt install libxtst-dev libxinerama-dev libx11-dev libxfixes-dev`
 
 ```bash
+git submodule update --init --recursive
 cmake . # Generate makefiles
 make    # Build the program at build/ndi-streamer
 ```

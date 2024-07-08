@@ -17,7 +17,7 @@
     #include <windows.h>
 #endif
 
-#include "lib/NDI SDK for Linux/include/Processing.NDI.Lib.h"
+#include "Processing.NDI.Lib.h"
 #include "lib/screen_capture_lite/include/ScreenCapture.h"
 
 std::map<int, void *> frame_buffers;

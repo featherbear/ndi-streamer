@@ -48,6 +48,9 @@ else()
     ${X11_Xinerama_LIB}
     ${CMAKE_THREAD_LIBS_INIT}
   )
+  include_directories(
+    "/usr/include/"
+  )
 endif()
 
 add_subdirectory(lib/screen_capture_lite ${CMAKE_BINARY_DIR} EXCLUDE_FROM_ALL)
